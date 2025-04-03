@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <style>
+      #root-fallback {
+        display: none;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="root-fallback">
+      <h1>Dashboard Fallback View</h1>
+      <p>
+        If you're seeing this message, there might be an issue with loading the
+        React application.
+      </p>
+      <p>Please check the browser console for error messages.</p>
+    </div>
+    <script>
+      // Show fallback content if React doesn't load within 3 seconds
+      setTimeout(() => {
+        if (document.getElementById("root").children.length === 0) {
+          document.getElementById("root-fallback").style.display = "block";
+          console.error("React application failed to mount after timeout");
+        }
+      }, 3000);
+    </script>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

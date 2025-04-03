@@ -1,0 +1,12 @@
+/* Import all CSS files for components */
+@import './App.css';
+@import './Dashboard.css';
+@import './Navbar.css';
+@import './Sidebar.css';
+@import './StatCard.css';
+@import './RecentTransactions.css';
+@import './CustomerTable.css';
+@import './OrderTable.css';
+@import './ProductTable.css';
+
+/* Global styles can be added here */ 

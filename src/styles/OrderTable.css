@@ -1,0 +1,128 @@
+.order-table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+.order-table th,
+.order-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.order-table-container.dark th,
+.order-table-container.dark td {
+  border-bottom: 1px solid #1e293b;
+}
+
+.order-table th {
+  font-weight: 600;
+  color: #64748b;
+}
+
+.order-table-container.dark th {
+  color: #94a3b8;
+}
+
+.order-table tbody tr {
+  transition: background-color 0.2s;
+}
+
+.order-table tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.order-table-container.dark tbody tr:hover {
+  background-color: #1e293b;
+}
+
+.customer-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.customer-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #4338ca;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: white;
+}
+
+.customer-name {
+  font-weight: 500;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status-badge.delivered {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.status-badge.processing {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+
+.status-badge.shipped {
+  background-color: #ddd6fe;
+  color: #7c3aed;
+}
+
+.status-badge.cancelled {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.order-table-container.dark .status-badge.delivered {
+  background-color: rgba(22, 163, 74, 0.2);
+  color: #4ade80;
+}
+
+.order-table-container.dark .status-badge.processing {
+  background-color: rgba(2, 132, 199, 0.2);
+  color: #38bdf8;
+}
+
+.order-table-container.dark .status-badge.shipped {
+  background-color: rgba(124, 58, 237, 0.2);
+  color: #a78bfa;
+}
+
+.order-table-container.dark .status-badge.cancelled {
+  background-color: rgba(220, 38, 38, 0.2);
+  color: #f87171;
+}
+
+@media screen and (max-width: 768px) {
+  .order-table th,
+  .order-table td {
+    padding: 10px 8px;
+  }
+  
+  .customer-avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+} 
